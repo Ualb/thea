@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 struct doc
 {
     FILE *file;

@@ -1,12 +1,22 @@
+struct document {
+    unsigned int *numbers_of_sheet;
+    unsigned int *first_sheet;
+};
 
 struct row {
-
+    const char *structure;
+    unsigned int *this_memory_location;
+    unsigned int *next_row;
 };
 
 struct sheet {
     const char *name;
-    unsigned int *is_created;
-    unsigned int *seek_point;
+    const char *structure; 
+    unsigned int *this_memory_location;
+    unsigned int *id_selected;
+    unsigned int *next_sheet;
+    unsigned int *numbers_of_data;
+    unsigned int *first_row;
 };
 
 
