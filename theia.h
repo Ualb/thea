@@ -26,7 +26,7 @@ struct response {
     unsigned int *error;
 };
 
-struct row *add(char *line) {}
+struct response *add(char *line) {}
 
 struct response *create(char *sheet) {} 
 
@@ -37,3 +37,5 @@ struct response *edit(char *sheet) {}
 struct response *remove(char *sheet, char *condition) {}
 
 struct response *del(char *sheet) {}
+
+struct row *read(char *sheet, char *condition);
