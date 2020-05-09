@@ -1,0 +1,5 @@
+DOC -> number_of_sheets, seek_first_sheet
+SHEET -> [name, id, color, id_extern, etc]{this_memory_location, id_selected, seek_next_sheet, numbers_of_data, seek_first_data}
+ROW -> [data, data, data, MA, etc]{this_memory_location, seek_next_row}
+SHEET -> [name, id, last_name]{this_memory_location, id_selected, seek_next_sheet, numbers_of_data, seek_first_data}
+ROW -> [data, data, data]{this_memory_location, seek_next_row}
