@@ -11,3 +11,8 @@ ROW -> [structure]{this_memory_location, seek_next_row}
 type of data
 DATA - is int, float, date, string of bool
 MA - is Memory Address of another sheet
+
+
+[structure of sheet]
+example:
+[[idEmployee, int, id],[name, varchar[45]]]
