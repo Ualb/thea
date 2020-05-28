@@ -3,7 +3,7 @@ struct document {
     unsigned int *first_sheet;
 };
 
-struct row {
+struct line {
     const char *structure;
     unsigned int *this_memory_location;
     unsigned int *next_row;
@@ -26,16 +26,37 @@ struct response {
     unsigned int *error;
 };
 
+/**
+ *  
+ */
 struct response *add(char *line) {}
 
+/**
+* crear una nueva hoja de datos
+*/
 struct response *create(char *sheet) {} 
 
+/**
+ * editar filas, con la condicion especificada
+ */ 
 struct response *edit(char *sheet, char *condition) {}
 
+/**
+ * editar hoja de datos
+ */ 
 struct response *edit(char *sheet) {}
 
+/**
+ * remover lineas, con la condicion especificada
+ */
 struct response *remove(char *sheet, char *condition) {}
 
+/**
+ * eliminar hoja de datos
+ */
 struct response *del(char *sheet) {}
 
-struct row *read(char *sheet, char *condition);
+/**
+ * leer lineas de la hoja de datos con la condicion especificada
+ */
+struct line *read(char *sheet, char *condition);
