@@ -30,9 +30,9 @@ struct response {
 };
 
 /**
- *  
+ *  agrega una linea nueva a la hora especificada
  */
-struct response *add(char *line) {}
+struct response *add(char *sheet, char *line) {}
 
 /**
 * crear una nueva hoja de datos
