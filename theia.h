@@ -118,3 +118,22 @@ inline struct structure *capture_structure(char *sheet) //ERROR, BUSCAR COMO RET
         
     }
 }
+
+#define FILE_DATABASE_ERROR             1000
+#define FLOW_TO_DATABASE_NO_CLOSE       1001
+
+inline void panic(unsigned int error, ...)
+{
+    switch (error)
+    {
+        case FILE_DATABASE_ERROR:
+            printf("ERROR [FILE_DATABASE_ERROR] 1000 - Error al acceder al fichero maestro\n"); 
+            exit(0);
+            break;
+        case FLOW_TO_DATABASE_NO_CLOSE:
+            printf("ERROR [FLOW_TO_DATABASE_NO_CLOSE] 1001 - No se puede cerrar la base de datos\n");
+            break;
+        default:
+            break;
+    }
+}
