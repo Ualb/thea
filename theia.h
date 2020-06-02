@@ -64,6 +64,11 @@ struct response *del(char *sheet) {}
  */
 struct line *read(char *sheet, char *condition);
 
+struct main_structure {
+    struct structure new_sheet;
+    struct structure *next;
+};
+
 struct structure {
     const char *type;
     const char *name;
@@ -80,8 +85,9 @@ struct structure {
 typedef unsigned int iterator;
 
 // extrae de una cadena de texto, las columnas y sus tipos de datos
-inline struct structure *capture_structure(char *sheet) //ERROR, BUSCAR COMO RETORNAR UNA COLECCION DE STRUCTURAS
+inline struct main_structure *capture_structure(char *sheet) //ERROR, BUSCAR COMO RETORNAR UNA COLECCION DE STRUCTURAS
 {
+    struct main_structure main;
     struct structure new_sheet;
     unsigned int *counter_corchette_open = (unsigned int *) malloc(sizeof(unsigned int));
     unsigned int *counter_corchette_close = (unsigned int *) malloc(sizeof(unsigned int));
@@ -117,6 +123,7 @@ inline struct structure *capture_structure(char *sheet) //ERROR, BUSCAR COMO RET
         }
         
     }
+    return &main;
 }
 
 #define FILE_DATABASE_ERROR             1000
