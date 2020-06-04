@@ -76,6 +76,31 @@ struct structure {
     struct structure *next;
 };
 
+/* error zone */
+
+#define FILE_DATABASE_ERROR             1000
+#define FLOW_TO_DATABASE_NO_CLOSE       1001
+#define PARSE_LEN_QUERY                 1002
+
+inline void panic(unsigned int error, ...)
+{
+    switch (error)
+    {
+        case FILE_DATABASE_ERROR:
+            printf("ERROR [FILE_DATABASE_ERROR] 1000 - Error al acceder al fichero maestro\n"); 
+            exit(0);
+            break;
+        case FLOW_TO_DATABASE_NO_CLOSE:
+            printf("ERROR [FLOW_TO_DATABASE_NO_CLOSE] 1001 - No se puede cerrar la base de datos\n");
+            break;
+        case PARSE_LEN_QUERY:
+            printf("ERROR [PARSE_LEN_QUERY] 1002 - La entrada por su longitud no es una consulta\n");
+            break;
+        default:
+            break;
+    }
+}
+
 // numero de corchetes de apertura
 #define TWO_CORCHETTE_APPERT    2
 #define ONE_SEMICOLON           1
@@ -87,6 +112,7 @@ typedef unsigned int iterator;
 // extrae de una cadena de texto, las columnas y sus tipos de datos
 inline struct main_structure *capture_structure(char *sheet) //ERROR, BUSCAR COMO RETORNAR UNA COLECCION DE STRUCTURAS
 {
+    if (strlen(sheet) <= 0) panic(PARSE_LEN_QUERY);
     struct main_structure main;
     struct structure new_sheet;
     unsigned int *counter_corchette_open = (unsigned int *) malloc(sizeof(unsigned int));
@@ -124,23 +150,4 @@ inline struct main_structure *capture_structure(char *sheet) //ERROR, BUSCAR COM
         
     }
     return &main;
-}
-
-#define FILE_DATABASE_ERROR             1000
-#define FLOW_TO_DATABASE_NO_CLOSE       1001
-
-inline void panic(unsigned int error, ...)
-{
-    switch (error)
-    {
-        case FILE_DATABASE_ERROR:
-            printf("ERROR [FILE_DATABASE_ERROR] 1000 - Error al acceder al fichero maestro\n"); 
-            exit(0);
-            break;
-        case FLOW_TO_DATABASE_NO_CLOSE:
-            printf("ERROR [FLOW_TO_DATABASE_NO_CLOSE] 1001 - No se puede cerrar la base de datos\n");
-            break;
-        default:
-            break;
-    }
 }
