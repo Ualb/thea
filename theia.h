@@ -1,5 +1,6 @@
 #include <stdlib.h> 
 #include <string.h>
+#include <stdio.h>
 
 struct document {
     unsigned int *numbers_of_sheet;
@@ -76,78 +77,7 @@ struct structure {
     struct structure *next;
 };
 
-/* error zone */
 
-#define FILE_DATABASE_ERROR             1000
-#define FLOW_TO_DATABASE_NO_CLOSE       1001
-#define PARSE_LEN_QUERY                 1002
-
-inline void panic(unsigned int error, ...)
-{
-    switch (error)
-    {
-        case FILE_DATABASE_ERROR:
-            printf("ERROR [FILE_DATABASE_ERROR] 1000 - Error al acceder al fichero maestro\n"); 
-            exit(0);
-            break;
-        case FLOW_TO_DATABASE_NO_CLOSE:
-            printf("ERROR [FLOW_TO_DATABASE_NO_CLOSE] 1001 - No se puede cerrar la base de datos\n");
-            break;
-        case PARSE_LEN_QUERY:
-            printf("ERROR [PARSE_LEN_QUERY] 1002 - La entrada por su longitud no es una consulta\n");
-            break;
-        default:
-            break;
-    }
-}
-
-// numero de corchetes de apertura
-#define TWO_CORCHETTE_APPERT    2
-#define ONE_SEMICOLON           1
-#define TWO_SEMICOLONS          2 
 
 // define un entero iterable, para for, while y demas
 typedef unsigned int iterator;
-
-// extrae de una cadena de texto, las columnas y sus tipos de datos
-inline struct main_structure *capture_structure(char *sheet) //ERROR, BUSCAR COMO RETORNAR UNA COLECCION DE STRUCTURAS
-{
-    if (strlen(sheet) <= 0) panic(PARSE_LEN_QUERY);
-    struct main_structure main;
-    struct structure new_sheet;
-    unsigned int *counter_corchette_open = (unsigned int *) malloc(sizeof(unsigned int));
-    unsigned int *counter_corchette_close = (unsigned int *) malloc(sizeof(unsigned int));
-    unsigned int *pointer_of_corchette = (unsigned int *) malloc(sizeof(unsigned int));
-    for (iterator index = 0; index < strlen(sheet); ++index) 
-    {
-        if(sheet[index] == '[') 
-        {
-            ++counter_corchette_open;
-            pointer_of_corchette = index;
-            
-        } else if(sheet[index] == ']')
-        {
-            ++counter_corchette_close;
-        } 
-        if (counter_corchette_close != 0 && counter_corchette_open - counter_corchette_close == 1) 
-        {
-            char *letters = (char *) malloc(sizeof(char) * index - *pointer_of_corchette - 1);
-            for (iterator i = 0; i < index - *pointer_of_corchette - 1; i++)
-            {
-                letters[i] = sheet[*pointer_of_corchette - 1 + i];
-            }
-            char *token = strtok(letters, ',');
-            iterator semicolon_counter = 0;
-            while (token != NULL) {
-                if (semicolon_counter == ONE_SEMICOLON) new_sheet.name = token;
-                else if (semicolon_counter == TWO_SEMICOLONS) new_sheet.type = token;
-                else new_sheet.is_identifier = 1;
-                token = strtok(NULL, ',');
-            }
-            counter_corchette_open = 1;
-            counter_corchette_close = 0;   
-        }
-        
-    }
-    return &main;
-}
