@@ -15,4 +15,4 @@ MA - is Memory Address of another sheet
 
 [structure of sheet]
 example:
-[[idEmployee, int, id],[name, varchar[45]]]
+[[idEmployee, int, id],[name, varchar(45)]]{seek of memory, 0, null, 0, null}

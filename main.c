@@ -2,20 +2,13 @@
 #include <string.h>
 #include <stdlib.h>
 
-// #include "theia.h"
+#include "theia.h"
 
 int main (void)
-{
-    int toknum = 0;
-    // char sheet[] = "[name, id, color, id_extern, etc]";
-    // const char delimiters[] = "[ ] ,";
-    // char *token = strtok(sheet, delimiters);
-    // while (token != NULL)
-    // {
-    //     printf("%d: %s\n", ++toknum, token);
-    //     token = strtok(NULL, delimiters);
-    // } 
- 
-
+{ 
+    char *sheet = (char *) malloc(50);
+    sheet = "[[idEmployee, int, id],[name, varchar(45)]]{seek of memory, 0, null, 0, null}";
+    char *tok = tokenizer(sheet);
+    printf("%s", tok);
     return 0;
 }

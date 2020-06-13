@@ -45,6 +45,9 @@ bool close_doc()
     return true;
 }
 
+char *sheet_structure   = NULL;
+char *meta_shhet        = NULL;
+
 struct sheet *capture_sheet(char *sheet) 
 {
     struct sheet result;
@@ -61,12 +64,25 @@ struct sheet *capture_sheet(char *sheet)
     return &result;
 }
 
+char *tokenizer(char *sheet)
+{
+    char *result; 
+    const char delimiters[] = "]{";
+    char *token = strtok(sheet, delimiters);
+    while (token != NULL)
+    {
+        ++token; 
+        printf("%s\n", token);
+        token = strtok(NULL, delimiters);
+    }
+    return &result; 
+}
+
 struct response *create(char *sheet) {
     struct sheet *data = capture_sheet(sheet);
 } 
 
 /* error zone */
-
 inline void panic(unsigned int error, ...)
 {
     switch (error)
