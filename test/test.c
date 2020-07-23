@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "theia.h"
+#include "../theia.h"
 
 int main (void)
 { 
