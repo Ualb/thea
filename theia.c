@@ -5,6 +5,10 @@
 
 #include "theia.h"
 
+/**
+ * Zona de constantes
+ */
+
 #define READ_FILE 0
 #define WRITE_FILE 1
 
@@ -12,6 +16,17 @@
 #define FLOW_TO_DATABASE_NO_CLOSE       1001
 #define PARSE_LEN_QUERY                 1002
 
+/**
+ * Zona de declaracion de funciones
+ *
+ */
+
+// la funcion general para el manejo de los errores
+void panic(unsigned int error, ...);
+
+/**
+ * Zona de estruturas
+ */
 struct doc
 {
     FILE *file;
@@ -83,7 +98,7 @@ struct response *create(char *sheet) {
 } 
 
 /* error zone */
-inline void panic(unsigned int error, ...)
+void panic(unsigned int error, ...)
 {
     switch (error)
     {
