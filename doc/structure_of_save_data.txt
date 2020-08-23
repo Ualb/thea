@@ -1,3 +1,28 @@
+
+==========    ===    ===    ==========    ==========     ==========
+==========    ===    ===    ===               ==         ==      ==
+    ==        ==========    ==========        ==         ==========
+    ==        ===    ===    ===               ==         ==      ==
+    ==        ===    ===    ==========    ==========     ==      ==
+
+ulises lópez
+========================================================================================================================
+DOC: DOC o documento es un archivo de almacenamiento, este está
+    conformado por una, muchas o ninguna SHEET.
+
+    Los DOC pueden estar dispersos en una o varias máquinas,
+    por lo tanto es importante tener control del archivo
+    .equifinality.
+
+SHEET: Son hojas o páginas donde se escriben los datos,
+   estos estan dispuestos en una estructura relacional
+   y condicional, es decir, sus elementos pueden existir
+   dada la aprovacion de una condicion o no.
+
+ROW: Las filas, son los datos en crudo
+
+========================================================================================================================
+
 DOC -> number_of_sheets, seek_first_sheet
 SHEET -> [name, id, color, id_extern, etc]{this_memory_location, id_selected, seek_next_sheet, numbers_of_data, seek_first_data}
 ROW -> [data, data, data, MA, etc]{this_memory_location, seek_next_row}
