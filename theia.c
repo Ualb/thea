@@ -8,6 +8,8 @@
 /**
  * Zona de constantes
  */
+//documento de la base de datos
+struct doc *doc;
 
 #define READ_FILE 0
 #define WRITE_FILE 1
@@ -33,8 +35,14 @@ struct doc
     char *path;
 };
 
-//documento de la base de datos
-struct doc *doc;
+
+/**
+ * Zona de motor lexico sintactico
+ */
+
+
+
+
 
 // obtiene el acceso al cuaderno maestro
 struct doc *get_doc(char *path, unsigned int kind) 
@@ -67,7 +75,7 @@ struct sheet *capture_sheet(char *sheet)
 {
     struct sheet result;
     int toknum = 0;
-    char data[] = sheet;
+    char data = sheet;
     const char delimiters[] = "[ , ]{ }";
     char *token = strtok(data, delimiters);
     while (token != NULL)
@@ -79,23 +87,23 @@ struct sheet *capture_sheet(char *sheet)
     return &result;
 }
 
-char *tokenizer(char *sheet)
-{
-    char *result; 
-    const char delimiters[] = "]{";
-    char *token = strtok(sheet, delimiters);
-    while (token != NULL)
-    {
-        ++token; 
-        printf("%s\n", token);
-        token = strtok(NULL, delimiters);
-    }
-    return &result; 
-}
+//char *tokenizer(char *sheet)
+//{
+//    char *result;
+//    const char delimiters[] = "]{";
+//    char *token = strtok(sheet, delimiters);
+//    while (token != NULL)
+//    {
+//        ++token;
+//        printf("%s\n", token);
+//        token = strtok(NULL, delimiters);
+//    }
+//    return &result;
+//}
 
-struct response *create(char *sheet) {
-    struct sheet *data = capture_sheet(sheet);
-} 
+//struct response *create(char *sheet) {
+//    struct sheet *data = capture_sheet(sheet);
+//}
 
 /* error zone */
 void panic(unsigned int error, ...)

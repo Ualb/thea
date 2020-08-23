@@ -57,19 +57,14 @@ struct response *add(char *sheet, char *line) {};
 struct response *create(char *sheet) {}; 
 
 /**
- * editar filas, con la condicion especificada
+ * editar filas, con la condicion especificada (opcional)
  */ 
 struct response *edit(char *sheet, char *condition) {};
 
 /**
- * editar hoja de datos
- */ 
-struct response *edit(char *sheet) {};
-
-/**
  * remover lineas, con la condicion especificada
  */
-struct response *remove(char *sheet, char *condition) {};
+struct response *remove_line(char *sheet, char *condition) {};
 
 /**
  * eliminar hoja de datos
