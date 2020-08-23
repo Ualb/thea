@@ -41,6 +41,22 @@ struct doc
  */
 
 
+// El algoritmo elimina los espacios dentro de una cadena de texto
+
+char *remove_spaces(char *str) {
+    int len = strlen(str);
+    if (len > 0) {
+        iterator i = 0;
+        iterator y = 0;
+        char *response = (char *) malloc(len);
+        while (str[i] != '\0') {
+            if (str[i] == ' ') response[y++];
+            ++i;
+        }
+        return &response;
+    }
+    return str;
+}
 
 
 
