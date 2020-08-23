@@ -1,0 +1,3 @@
+C:/Users/ualb/Documents/git/ualb/theia/cmake-build-debug/CMakeFiles/Theia.dir
+C:/Users/ualb/Documents/git/ualb/theia/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ualb/Documents/git/ualb/theia/cmake-build-debug/CMakeFiles/rebuild_cache.dir
