@@ -43,25 +43,33 @@ struct doc
  */
 
 // Sustrae una procion de un texto
-char *substract_text(char *str, int inital, int end) {
-
+char *substract_text(char *str, int start, int end) {
+    if (end > start) return str;
+    int len = (end - start) + 1;
+    char *response = (char *) malloc(len);
+    while (start < end) {
+        response[start] = str[start];
+        ++start;
+    }
+    response[end + 1] = '\0';
+    return response;
 }
 
 
 // Elimina los espacios encontrados al final de un texto
 char *remove_end_spaces(char *str) {
-    int len = strlen(str);
+    size_t len = strlen(str);
     if (len > 0) {
         iterator end = len - 1;
         while (str[end] == ' ') --end;
-        return substract_text(&str, ZERO_VALUE, end);
+        return substract_text(str, ZERO_VALUE, end);
     }
     return str;
 }
 
 // El algoritmo elimina los espacios dentro de una cadena de texto
 char *remove_spaces(char *str) {
-    int len = strlen(str);
+    size_t len = strlen(str);
     if (len > 0) {
         iterator i = 0;
         iterator y = 0;
@@ -70,7 +78,7 @@ char *remove_spaces(char *str) {
             if (str[i] == ' ') response[y++];
             ++i;
         }
-        return &response;
+        return response;
     }
     return str;
 }
