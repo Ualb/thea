@@ -1,9 +1,8 @@
-
-
 #include <malloc.h>
 #include <mem.h>
 
 #include "../utility/utility.h"
+#include "analizer.h"
 
 // Sustrae una procion de un texto
 char *substract_text(char *str, int start, int end) {

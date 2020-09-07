@@ -169,6 +169,33 @@ analizer/analizer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/analizer/analizer.c.s
 .PHONY : analizer/analizer.c.s
 
+test/sintact_analizer_test.obj: test/sintact_analizer_test.c.obj
+
+.PHONY : test/sintact_analizer_test.obj
+
+# target to build an object file
+test/sintact_analizer_test.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj
+.PHONY : test/sintact_analizer_test.c.obj
+
+test/sintact_analizer_test.i: test/sintact_analizer_test.c.i
+
+.PHONY : test/sintact_analizer_test.i
+
+# target to preprocess a source file
+test/sintact_analizer_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/test/sintact_analizer_test.c.i
+.PHONY : test/sintact_analizer_test.c.i
+
+test/sintact_analizer_test.s: test/sintact_analizer_test.c.s
+
+.PHONY : test/sintact_analizer_test.s
+
+# target to generate assembly for a file
+test/sintact_analizer_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/test/sintact_analizer_test.c.s
+.PHONY : test/sintact_analizer_test.c.s
+
 theia.obj: theia.c.obj
 
 .PHONY : theia.obj
@@ -235,6 +262,9 @@ help:
 	@echo ... analizer/analizer.obj
 	@echo ... analizer/analizer.i
 	@echo ... analizer/analizer.s
+	@echo ... test/sintact_analizer_test.obj
+	@echo ... test/sintact_analizer_test.i
+	@echo ... test/sintact_analizer_test.s
 	@echo ... theia.obj
 	@echo ... theia.i
 	@echo ... theia.s

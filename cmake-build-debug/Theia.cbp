@@ -80,6 +80,9 @@
 		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/analizer/analizer.h">
 			<Option target="Theia"/>
 		</Unit>
+		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/test/sintact_analizer_test.c">
+			<Option target="Theia"/>
+		</Unit>
 		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/theia.c">
 			<Option target="Theia"/>
 		</Unit>

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Theia.dir/analizer/analizer.c.obj"
+  "CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj"
   "CMakeFiles/Theia.dir/theia.c.obj"
   "CMakeFiles/Theia.dir/utility/utility.c.obj"
   "Theia.exe"
