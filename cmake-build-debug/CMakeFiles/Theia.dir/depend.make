@@ -5,7 +5,9 @@ CMakeFiles/Theia.dir/analizer/analizer.c.obj: ../analizer/analizer.c
 CMakeFiles/Theia.dir/analizer/analizer.c.obj: ../analizer/analizer.h
 CMakeFiles/Theia.dir/analizer/analizer.c.obj: ../utility/utility.h
 
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../analizer/analizer.h
 CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../test/sintact_analizer_test.c
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../utility/utility.h
 
 CMakeFiles/Theia.dir/theia.c.obj: ../theia.c
 CMakeFiles/Theia.dir/theia.c.obj: ../theia.h

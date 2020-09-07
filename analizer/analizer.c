@@ -1,17 +1,17 @@
 #include <malloc.h>
-#include <mem.h>
+#include <string.h>
 
 #include "../utility/utility.h"
 #include "analizer.h"
 
 // Sustrae una procion de un texto
 char *substract_text(char *str, int start, int end) {
-    if (end > start) return str;
-    int len = (end - start) + 1;
+    if (start > end) return str;
+    unsigned int len = (end - start);
     char *response = (char *) malloc(len);
-    while (start < end) {
-        response[start] = str[start];
-        ++start;
+    int counter = 0;
+    while (start < end + 1) {
+        response[counter++] = str[start++];
     }
     response[end + 1] = '\0';
     return response;
