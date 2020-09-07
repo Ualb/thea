@@ -142,6 +142,33 @@ Theia/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/build
 .PHONY : Theia/fast
 
+analizer/analizer.obj: analizer/analizer.c.obj
+
+.PHONY : analizer/analizer.obj
+
+# target to build an object file
+analizer/analizer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/analizer/analizer.c.obj
+.PHONY : analizer/analizer.c.obj
+
+analizer/analizer.i: analizer/analizer.c.i
+
+.PHONY : analizer/analizer.i
+
+# target to preprocess a source file
+analizer/analizer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/analizer/analizer.c.i
+.PHONY : analizer/analizer.c.i
+
+analizer/analizer.s: analizer/analizer.c.s
+
+.PHONY : analizer/analizer.s
+
+# target to generate assembly for a file
+analizer/analizer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/analizer/analizer.c.s
+.PHONY : analizer/analizer.c.s
+
 theia.obj: theia.c.obj
 
 .PHONY : theia.obj
@@ -169,6 +196,33 @@ theia.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/theia.c.s
 .PHONY : theia.c.s
 
+utility/utility.obj: utility/utility.c.obj
+
+.PHONY : utility/utility.obj
+
+# target to build an object file
+utility/utility.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/utility/utility.c.obj
+.PHONY : utility/utility.c.obj
+
+utility/utility.i: utility/utility.c.i
+
+.PHONY : utility/utility.i
+
+# target to preprocess a source file
+utility/utility.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/utility/utility.c.i
+.PHONY : utility/utility.c.i
+
+utility/utility.s: utility/utility.c.s
+
+.PHONY : utility/utility.s
+
+# target to generate assembly for a file
+utility/utility.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/utility/utility.c.s
+.PHONY : utility/utility.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -178,9 +232,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Theia
+	@echo ... analizer/analizer.obj
+	@echo ... analizer/analizer.i
+	@echo ... analizer/analizer.s
 	@echo ... theia.obj
 	@echo ... theia.i
 	@echo ... theia.s
+	@echo ... utility/utility.obj
+	@echo ... utility/utility.i
+	@echo ... utility/utility.s
 .PHONY : help
 
 

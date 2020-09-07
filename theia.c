@@ -1,14 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
+
 #include <stdbool.h>
 #include <string.h>
 
 #include "theia.h"
+#include "utility/utility.h"
 
-/**
- * Zona de constantes
- */
-//documento de la base de datos
+
 struct doc *doc;
 
 #define ZERO_VALUE 0
@@ -16,17 +13,6 @@ struct doc *doc;
 #define READ_FILE 0
 #define WRITE_FILE 1
 
-#define FILE_DATABASE_ERROR             1000
-#define FLOW_TO_DATABASE_NO_CLOSE       1001
-#define PARSE_LEN_QUERY                 1002
-
-/**
- * Zona de declaracion de funciones
- *
- */
-
-// la funcion general para el manejo de los errores
-void panic(unsigned int error, ...);
 
 /**
  * Zona de estruturas
@@ -38,54 +24,6 @@ struct doc
 };
 
 
-/**
- * Zona de motor lexico sintactico
- */
-
-// Sustrae una procion de un texto
-char *substract_text(char *str, int start, int end) {
-    if (end > start) return str;
-    int len = (end - start) + 1;
-    char *response = (char *) malloc(len);
-    while (start < end) {
-        response[start] = str[start];
-        ++start;
-    }
-    response[end + 1] = '\0';
-    return response;
-}
-
-
-// Elimina los espacios encontrados al final de un texto
-char *remove_end_spaces(char *str) {
-    size_t len = strlen(str);
-    if (len > 0) {
-        iterator end = len - 1;
-        while (str[end] == ' ') --end;
-        return substract_text(str, ZERO_VALUE, end);
-    }
-    return str;
-}
-
-// El algoritmo elimina los espacios dentro de una cadena de texto
-char *remove_spaces(char *str) {
-    size_t len = strlen(str);
-    if (len > 0) {
-        iterator i = 0;
-        iterator y = 0;
-        char *response = (char *) malloc(len);
-        while (str[i] != '\0') {
-            if (str[i] == ' ') response[y++];
-            ++i;
-        }
-        return response;
-    }
-    return str;
-}
-
-
-
-// obtiene el acceso al cuaderno maestro
 struct doc *get_doc(char *path, unsigned int kind) 
 {
     char *restric = NULL; 
@@ -126,42 +64,4 @@ struct sheet *capture_sheet(char *sheet)
         token = strtok(NULL, delimiters);
     }
     return &result;
-}
-
-//char *tokenizer(char *sheet)
-//{
-//    char *result;
-//    const char delimiters[] = "]{";
-//    char *token = strtok(sheet, delimiters);
-//    while (token != NULL)
-//    {
-//        ++token;
-//        printf("%s\n", token);
-//        token = strtok(NULL, delimiters);
-//    }
-//    return &result;
-//}
-
-//struct response *create(char *sheet) {
-//    struct sheet *data = capture_sheet(sheet);
-//}
-
-/* error zone */
-void panic(unsigned int error, ...)
-{
-    switch (error)
-    {
-        case FILE_DATABASE_ERROR:
-            printf("ERROR [FILE_DATABASE_ERROR] 1000 - Error al acceder al fichero maestro\n"); 
-            exit(0);
-            break;
-        case FLOW_TO_DATABASE_NO_CLOSE:
-            printf("ERROR [FLOW_TO_DATABASE_NO_CLOSE] 1001 - No se puede cerrar la base de datos\n");
-            break;
-        case PARSE_LEN_QUERY:
-            printf("ERROR [PARSE_LEN_QUERY] 1002 - La entrada por su longitud no es una consulta\n");
-            break;
-        default:
-            break;
-    }
 }

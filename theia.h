@@ -49,43 +49,30 @@ struct response {
 /**
  *  agrega una linea nueva a la hora especificada
  */
-struct response *add(char *sheet, char *line) {};
+struct response *add(char *sheet, char *line);
 
 /**
 * crear una nueva hoja de datos
 */
-struct response *create(char *sheet) {}; 
+struct response *create(char *sheet);
 
 /**
  * editar filas, con la condicion especificada (opcional)
  */ 
-struct response *edit(char *sheet, char *condition) {};
+struct response *edit(char *sheet, char *condition);
 
 /**
  * remover lineas, con la condicion especificada
  */
-struct response *remove_line(char *sheet, char *condition) {};
+struct response *remove_line(char *sheet, char *condition);
 
 /**
  * eliminar hoja de datos
  */
-struct response *del(char *sheet) {};
+struct response *del(char *sheet);
 
 /**
  * leer lineas de la hoja de datos con la condicion especificada
  */
 struct line *read(char *sheet, char *condition);
-
-
-// define un entero iterable, para for, while y demas
-typedef unsigned int iterator;
-
-
-
-
-// test zone
-
-char *tokenizer(char *sheet){};
-
-
 #endif
