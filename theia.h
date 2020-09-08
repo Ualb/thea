@@ -4,6 +4,7 @@
 #include <stdlib.h> 
 #include <string.h>
 #include <stdio.h>
+#include "utility/utility.h"
 
 /**
  * The document is a collections of informations
@@ -24,11 +25,56 @@ struct line {
 };
 
 /**
+ * tipos de datos aceptados
+ */
+enum data_types {
+    INT,
+    CHAR,
+    CHAR_LEN,
+    BOOLEAN,
+    TEXT,
+    DOUBLE,
+    BYTE
+};
+
+/**
+ * caracteristicas unicas de cada hoja
+ */
+typedef struct {
+    unsigned int identity;
+    char *name;
+    enum data_types type;
+    boolean isNull;
+    boolean isPrimary;
+//    condicion
+} fields;
+
+/**
+ * tipos de datos en cada elemento de la hoja
+ */
+struct sheet_data {
+    fields *fields;
+    int size_fields;
+};
+
+/**
+ * otros datos de una hoja
+ */
+struct sheet_meta_data {
+    int *this_memory_location;
+    int *id_selected; // identity campo
+    int *seek_next_sheet;
+    int *numbers_of_rows;
+    int *seek_first_data;
+};
+
+/**
  * The sheets are the abstract entities for the datas
  */
 struct sheet {
     const char *name;
-    const char *structure; 
+    struct sheet_data sheet_data;
+    struct sheet_meta_data sheet_meta_data;
     unsigned int *this_memory_location;
     unsigned int *id_selected;
     unsigned int *next_sheet;

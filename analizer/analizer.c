@@ -3,6 +3,7 @@
 
 #include "../utility/utility.h"
 #include "analizer.h"
+#include "../theia.h"
 
 // Sustrae una procion de un texto
 char *substract_text(char *str, int start, int end) {
@@ -44,6 +45,23 @@ char *remove_spaces(char *str) {
         return response;
     }
     return str;
+}
+
+// el algoritmo se encarga de rebanar una hoja de datos
+struct sheet *capture_sheet(char *sheet)
+{
+    struct sheet result;
+    int toknum = 0;
+    char data = sheet;
+    const char delimiters[] = "[ , ]{ }";
+    char *token = strtok(data, delimiters);
+    while (token != NULL)
+    {
+        ++token;
+        if (toknum == 0) result.name = token;
+        token = strtok(NULL, delimiters);
+    }
+    return &result;
 }
 
 //  token data tiene como fin rebanar un texto y extraer sus componentes dado en un {}
