@@ -11,17 +11,8 @@
  * required for the file .db 
  */
 struct document {
-    unsigned int *numbers_of_sheet;
-    unsigned int *first_sheet;
-};
-
-/**
- * A line is a row of the sheet
- */
-struct line {
-    const char *structure;
-    unsigned int *this_memory_location;
-    unsigned int *next_row;
+    unsigned char *numbers_of_sheet;
+    unsigned char *first_sheet;
 };
 
 /**
@@ -41,11 +32,11 @@ enum data_types {
  * caracteristicas unicas de cada hoja
  */
 typedef struct {
-    unsigned int identity;
+    unsigned int *identity;
     char *name;
-    enum data_types type;
-    boolean isNull;
-    boolean isPrimary;
+    enum data_types *type;
+    boolean *isNull;
+    boolean *isPrimary;
 //    condicion
 } fields;
 
@@ -54,18 +45,18 @@ typedef struct {
  */
 struct sheet_data {
     fields *fields;
-    int size_fields;
+    unsigned int *size_fields;
 };
 
 /**
  * otros datos de una hoja
  */
 struct sheet_meta_data {
-    int *this_memory_location;
-    int *id_selected; // identity campo
-    int *seek_next_sheet;
-    int *numbers_of_rows;
-    int *seek_first_data;
+    char *this_memory_location;
+    char *id_selected; // identity campo
+    char *seek_next_sheet;
+    char *numbers_of_rows;
+    char *seek_first_data;
 };
 
 /**
@@ -73,13 +64,22 @@ struct sheet_meta_data {
  */
 struct sheet {
     const char *name;
-    struct sheet_data sheet_data;
-    struct sheet_meta_data sheet_meta_data;
-    unsigned int *this_memory_location;
-    unsigned int *id_selected;
-    unsigned int *next_sheet;
-    unsigned int *numbers_of_data;
-    unsigned int *first_row;
+    struct sheet_data *sheet_data;
+    struct sheet_meta_data *sheet_meta_data;
+    unsigned char *this_memory_location;
+    unsigned char *id_selected;
+    unsigned char *next_sheet;
+    unsigned char *numbers_of_data;
+    unsigned char *first_row;
+};
+
+/**
+ * A line is a row of the sheet
+ */
+struct line {
+    struct sheet_data *sheet_data;
+    unsigned char *this_memory_location;
+    unsigned char *next_row;
 };
 
 /**
@@ -87,9 +87,9 @@ struct sheet {
  * do not return lines or sheets
  */
 struct response {
-    unsigned int *is_ok;
-    unsigned int *id_line;
-    unsigned int *error;
+    unsigned char *is_ok;
+    unsigned char *id_line;
+    unsigned char *error;
 };
 
 /**

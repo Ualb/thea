@@ -48,15 +48,13 @@ char *remove_spaces(char *str) {
 }
 
 // el algoritmo se encarga de rebanar una hoja de datos
-struct sheet *capture_sheet(char *sheet)
-{
+struct sheet *capture_sheet(char *sheet) {
     struct sheet result;
     int toknum = 0;
     char data = sheet;
     const char delimiters[] = "[ , ]{ }";
     char *token = strtok(data, delimiters);
-    while (token != NULL)
-    {
+    while (token != NULL) {
         ++token;
         if (toknum == 0) result.name = token;
         token = strtok(NULL, delimiters);
