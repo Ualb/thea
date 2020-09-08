@@ -13,12 +13,41 @@ struct doc *doc;
 #define READ_FILE 0
 #define WRITE_FILE 1
 
+enum data_types {
+    INT,
+    CHAR,
+    CHAR_LEN,
+    BOOLEAN,
+    DOUBLE,
+    BYTE
+};
 
-/**
- * Zona de estruturas
- */
-struct doc
-{
+// --------------------------------------------
+// * Zona de estruturas
+// --------------------------------------------
+typedef struct {
+    unsigned int identity;
+    char *name;
+    enum data_types type;
+    boolean isNull;
+    boolean isPrimary;
+//    condicion
+} fields;
+
+struct sheet_data {
+     fields *fields;
+     int size_fields;
+ };
+
+struct sheet_meta_data {
+    int *this_memory_location;
+    int *id_selected; // identity campo
+    int *seek_next_sheet;
+    int *numbers_of_rows;
+    int *seek_first_data;
+};
+
+struct doc {
     FILE *file;
     char *path;
 };

@@ -45,3 +45,5 @@ char *remove_spaces(char *str) {
     }
     return str;
 }
+
+//  token data tiene como fin rebanar un texto y extraer sus componentes dado en un {}
