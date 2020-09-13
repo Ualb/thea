@@ -6,7 +6,7 @@
 #include "../theia.h"
 
 // Sustrae una procion de un texto
-char *substract_text(char *str, int start, int end) {
+char *substractText(char *str, int start, int end) {
     if (start > end) return str;
     unsigned int len = (end - start);
     char *response = (char *) malloc(len * sizeof(char));
@@ -20,18 +20,18 @@ char *substract_text(char *str, int start, int end) {
 
 
 // Elimina los espacios encontrados al final de un texto
-char *remove_end_spaces(char *str) {
+char *removeEndSpaces(char *str) {
     iterator len = strlen(str);
     if (len > 0) {
         iterator end = len - 1;
         while (str[end] == ' ') --end;
-        return substract_text(str, ZERO_VALUE, end);
+        return substractText(str, ZERO_VALUE, end);
     }
     return str;
 }
 
 // El algoritmo elimina los espacios dentro de una cadena de texto
-char *remove_spaces(char *str) {
+char *removeSpaces(char *str) {
     iterator len = strlen(str);
     if (len > 0) {
         iterator i = 0;
@@ -48,12 +48,14 @@ char *remove_spaces(char *str) {
 }
 
 // el algoritmo se encarga de rebanar una hoja de datos
-struct sheet *capture_sheet(char *sheet) {
+
+
+//  token data tiene como fin rebanar un texto y extraer sus componentes dado en un {}
+struct sheet *capture_sheet(char *sheet_definition) {
     struct sheet result;
     int toknum = 0;
-    char data = sheet;
     const char delimiters[] = "[ , ]{ }";
-    char *token = strtok(data, delimiters);
+    char *token = strtok(sheet_definition, delimiters);
     while (token != NULL) {
         ++token;
         if (toknum == 0) result.name = token;
@@ -61,5 +63,3 @@ struct sheet *capture_sheet(char *sheet) {
     }
     return &result;
 }
-
-//  token data tiene como fin rebanar un texto y extraer sus componentes dado en un {}

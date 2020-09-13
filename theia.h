@@ -110,7 +110,7 @@ struct response *edit(char *sheet, char *condition);
 /**
  * remover lineas, con la condicion especificada
  */
-struct response *remove_line(char *sheet, char *condition);
+struct response *removeLine(char *sheet, char *condition);
 
 /**
  * eliminar hoja de datos
