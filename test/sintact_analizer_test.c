@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../analizer/analizer.h"
-#include "../utility/utility.h"
+#include "../src/analizer/analizer.h"
+#include "../src/utility/utility.h"
 
 boolean testSubtractText();
 boolean testRemoveEndSpaces();

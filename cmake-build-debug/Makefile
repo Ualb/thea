@@ -142,32 +142,86 @@ Theia/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/build
 .PHONY : Theia/fast
 
-analizer/analizer.obj: analizer/analizer.c.obj
+src/analizer/analizer.obj: src/analizer/analizer.c.obj
 
-.PHONY : analizer/analizer.obj
+.PHONY : src/analizer/analizer.obj
 
 # target to build an object file
-analizer/analizer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/analizer/analizer.c.obj
-.PHONY : analizer/analizer.c.obj
+src/analizer/analizer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/analizer/analizer.c.obj
+.PHONY : src/analizer/analizer.c.obj
 
-analizer/analizer.i: analizer/analizer.c.i
+src/analizer/analizer.i: src/analizer/analizer.c.i
 
-.PHONY : analizer/analizer.i
+.PHONY : src/analizer/analizer.i
 
 # target to preprocess a source file
-analizer/analizer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/analizer/analizer.c.i
-.PHONY : analizer/analizer.c.i
+src/analizer/analizer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/analizer/analizer.c.i
+.PHONY : src/analizer/analizer.c.i
 
-analizer/analizer.s: analizer/analizer.c.s
+src/analizer/analizer.s: src/analizer/analizer.c.s
 
-.PHONY : analizer/analizer.s
+.PHONY : src/analizer/analizer.s
 
 # target to generate assembly for a file
-analizer/analizer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/analizer/analizer.c.s
-.PHONY : analizer/analizer.c.s
+src/analizer/analizer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/analizer/analizer.c.s
+.PHONY : src/analizer/analizer.c.s
+
+src/theia.obj: src/theia.c.obj
+
+.PHONY : src/theia.obj
+
+# target to build an object file
+src/theia.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/theia.c.obj
+.PHONY : src/theia.c.obj
+
+src/theia.i: src/theia.c.i
+
+.PHONY : src/theia.i
+
+# target to preprocess a source file
+src/theia.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/theia.c.i
+.PHONY : src/theia.c.i
+
+src/theia.s: src/theia.c.s
+
+.PHONY : src/theia.s
+
+# target to generate assembly for a file
+src/theia.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/theia.c.s
+.PHONY : src/theia.c.s
+
+src/utility/utility.obj: src/utility/utility.c.obj
+
+.PHONY : src/utility/utility.obj
+
+# target to build an object file
+src/utility/utility.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/utility/utility.c.obj
+.PHONY : src/utility/utility.c.obj
+
+src/utility/utility.i: src/utility/utility.c.i
+
+.PHONY : src/utility/utility.i
+
+# target to preprocess a source file
+src/utility/utility.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/utility/utility.c.i
+.PHONY : src/utility/utility.c.i
+
+src/utility/utility.s: src/utility/utility.c.s
+
+.PHONY : src/utility/utility.s
+
+# target to generate assembly for a file
+src/utility/utility.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/utility/utility.c.s
+.PHONY : src/utility/utility.c.s
 
 test/sintact_analizer_test.obj: test/sintact_analizer_test.c.obj
 
@@ -196,60 +250,6 @@ test/sintact_analizer_test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/test/sintact_analizer_test.c.s
 .PHONY : test/sintact_analizer_test.c.s
 
-theia.obj: theia.c.obj
-
-.PHONY : theia.obj
-
-# target to build an object file
-theia.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/theia.c.obj
-.PHONY : theia.c.obj
-
-theia.i: theia.c.i
-
-.PHONY : theia.i
-
-# target to preprocess a source file
-theia.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/theia.c.i
-.PHONY : theia.c.i
-
-theia.s: theia.c.s
-
-.PHONY : theia.s
-
-# target to generate assembly for a file
-theia.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/theia.c.s
-.PHONY : theia.c.s
-
-utility/utility.obj: utility/utility.c.obj
-
-.PHONY : utility/utility.obj
-
-# target to build an object file
-utility/utility.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/utility/utility.c.obj
-.PHONY : utility/utility.c.obj
-
-utility/utility.i: utility/utility.c.i
-
-.PHONY : utility/utility.i
-
-# target to preprocess a source file
-utility/utility.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/utility/utility.c.i
-.PHONY : utility/utility.c.i
-
-utility/utility.s: utility/utility.c.s
-
-.PHONY : utility/utility.s
-
-# target to generate assembly for a file
-utility/utility.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/utility/utility.c.s
-.PHONY : utility/utility.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -259,18 +259,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Theia
-	@echo ... analizer/analizer.obj
-	@echo ... analizer/analizer.i
-	@echo ... analizer/analizer.s
+	@echo ... src/analizer/analizer.obj
+	@echo ... src/analizer/analizer.i
+	@echo ... src/analizer/analizer.s
+	@echo ... src/theia.obj
+	@echo ... src/theia.i
+	@echo ... src/theia.s
+	@echo ... src/utility/utility.obj
+	@echo ... src/utility/utility.i
+	@echo ... src/utility/utility.s
 	@echo ... test/sintact_analizer_test.obj
 	@echo ... test/sintact_analizer_test.i
 	@echo ... test/sintact_analizer_test.s
-	@echo ... theia.obj
-	@echo ... theia.i
-	@echo ... theia.s
-	@echo ... utility/utility.obj
-	@echo ... utility/utility.i
-	@echo ... utility/utility.s
 .PHONY : help
 
 

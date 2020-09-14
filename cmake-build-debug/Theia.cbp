@@ -74,25 +74,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/analizer/analizer.c">
+		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/analizer/analizer.c">
 			<Option target="Theia"/>
 		</Unit>
-		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/analizer/analizer.h">
+		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/analizer/analizer.h">
+			<Option target="Theia"/>
+		</Unit>
+		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/theia.c">
+			<Option target="Theia"/>
+		</Unit>
+		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/theia.h">
+			<Option target="Theia"/>
+		</Unit>
+		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/utility/utility.c">
+			<Option target="Theia"/>
+		</Unit>
+		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/utility/utility.h">
 			<Option target="Theia"/>
 		</Unit>
 		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/test/sintact_analizer_test.c">
-			<Option target="Theia"/>
-		</Unit>
-		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/theia.c">
-			<Option target="Theia"/>
-		</Unit>
-		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/theia.h">
-			<Option target="Theia"/>
-		</Unit>
-		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/utility/utility.c">
-			<Option target="Theia"/>
-		</Unit>
-		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/utility/utility.h">
 			<Option target="Theia"/>
 		</Unit>
 		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/CMakeLists.txt">

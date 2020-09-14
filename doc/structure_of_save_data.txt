@@ -41,3 +41,16 @@ MA - is Memory Address of another sheet
 [structure of sheet]
 example:
 [[idEmployee, int, id],[name, varchar(45)]]{seek of memory, 0, null, 0, null}
+
+=========================================================================================================================
+
+Shell
+
+Para crear documentos
+set(type=Doc, location=./myDocs, name=NewYork)
+
+Para crear hojas de datos
+set(type=Sheet, doc=NewYork, name=Customers)
+
+Para crear caracteristicas de las hojas de datos
+set()
