@@ -7,6 +7,19 @@ CMakeFiles/Theia.dir/analizer/analizer.c.obj: ../theia.h
 CMakeFiles/Theia.dir/analizer/analizer.c.obj: ../utility/utility.h
 
 CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../analizer/analizer.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/arraylist.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/debug.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/json.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/json_c_version.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/json_inttypes.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/json_object.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/json_object_iterator.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/json_pointer.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/json_tokener.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/json_types.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/json_util.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/linkhash.h
+CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../json-c/printbuf.h
 CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../test/sintact_analizer_test.c
 CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../utility/utility.h
 
