@@ -8,7 +8,7 @@ boolean testSubtractText();
 boolean testRemoveEndSpaces();
 boolean testRemoveSpaces();
 
-boolean main(void) {
+int main(void) {
     printf("%s", testSubtractText() ? "." : "F");
     printf("%s", testRemoveEndSpaces() ? "." : "F");
     printf("%s", testRemoveSpaces() ? "." : "F");

@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
-
+SET (CMAKE_C_COMPILER_WORKS 1)
+SET (CMAKE_CXX_COMPILER_WORKS 1)
 project(Theia)
 set(SOURCES_FILES theia.c analizer/analizer.h analizer/analizer.c utility/utility.h utility/utility.c test/sintact_analizer_test.c)
 add_executable(Theia ${SOURCES_FILES})

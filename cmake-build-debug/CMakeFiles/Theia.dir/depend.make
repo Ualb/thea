@@ -3,6 +3,7 @@
 
 CMakeFiles/Theia.dir/analizer/analizer.c.obj: ../analizer/analizer.c
 CMakeFiles/Theia.dir/analizer/analizer.c.obj: ../analizer/analizer.h
+CMakeFiles/Theia.dir/analizer/analizer.c.obj: ../theia.h
 CMakeFiles/Theia.dir/analizer/analizer.c.obj: ../utility/utility.h
 
 CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../analizer/analizer.h

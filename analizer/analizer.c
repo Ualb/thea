@@ -51,7 +51,7 @@ char *removeSpaces(char *str) {
 
 
 //  token data tiene como fin rebanar un texto y extraer sus componentes dado en un {}
-struct sheet *capture_sheet(char *sheet_definition) {
+struct sheet *captureSheet(char *sheet_definition) {
     struct sheet result;
     int toknum = 0;
     const char delimiters[] = "[ , ]{ }";
