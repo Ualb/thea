@@ -7,21 +7,22 @@
 
 ulises lópez
 ========================================================================================================================
-DOC: DOC o documento es un archivo de almacenamiento, este está
-    conformado por una, muchas o ninguna SHEET.
+DOC: DOC or document is an archive file, this is
+     made up of one, many or none SHEET.
 
-    Los DOC pueden estar dispersos en una o varias máquinas,
-    por lo tanto es importante tener control del archivo
+    DOCs can be scattered on one or more machines,
+    therefore it is important to have control of the file.
     .equifinality.
 
-SHEET: Son hojas o páginas donde se escriben los datos,
-   estos estan dispuestos en una estructura relacional
-   y condicional, es decir, sus elementos pueden existir
-   dada la aprovacion de una condicion o no.
+SHEET: They are sheets or pages where the data is written,
+       these are arranged in a relational structure
+       and conditional, that is, its elements can exist
+       given the approval of a condition or not.
 
-ROW: Las filas, son los datos en crudo
+ROW: The rows, are the data in raw.
 
 ========================================================================================================================
+Internal pre-procesor
 
 DOC -> number_of_sheets, seek_first_sheet
 SHEET -> [name, id, color, id_extern, etc]{this_memory_location, id_selected, seek_next_sheet, numbers_of_rows, seek_first_data}
@@ -44,13 +45,58 @@ example:
 
 =========================================================================================================================
 
-Shell
+COMMANDS BASICS
 
-Para crear documentos
-set(type=Doc, location=./myDocs, name=NewYork)
+For create the doc's
+{
+    set {
+        type: "doc",
+        location: "./myDocs",
+        name: "NewYork"
+    }
+}
 
-Para crear hojas de datos
-set(type=Sheet, doc=NewYork, name=Customers)
+For create the sheet's
+{
+    set {
+        type: "sheet",
+        doc: "NewYork",
+        name: "Customers",
+        attributes: {
+            first_name: "string, not-null, default:Anonymous",
+            last_name: "string",
+            phone: "number",
+            birth_day: "date",
+            hight: "float"
+        },
+        conditions: {
+            year_birth_day: "if YEAR(birth_day) > 1950: BLOCK()",
+            phone_start_with: "if STR.STARTWITH(STR.CONVERT(phone), 505): ADD.ATRIBUTE(region:'string(Nic)')"
+        }
+    }
+}
 
-Para crear caracteristicas de las hojas de datos
-set()
+for edit the doc or sheet
+{
+    edit {
+        type: "sheet",
+        doc: "NewYork",
+        name: "CustomersMorning"
+    }
+}
+
+for add  data to sheet
+{
+    add {
+        to: "Customers",
+        set_attributes: {
+            first_name: "Jorge",
+            last_name: "Lex",
+            phone: 505909090,
+            birth_day: "1964/10/22",
+            hight: 5.50
+        }
+    }
+}
+
+=========================================================================================================================
