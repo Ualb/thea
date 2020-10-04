@@ -99,4 +99,12 @@ for add  data to sheet
     }
 }
 
+for get data to sheet
+{
+    get {
+        from: "Customers",
+        get_attributes: [id, first_name, YEAR(birth_day), region]
+    }
+}
+
 =========================================================================================================================
