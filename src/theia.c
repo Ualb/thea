@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include "theia.h"
-#include "utility/utility.h"
+#include "errors/panic.h"
 
 
 struct doc *doc;

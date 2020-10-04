@@ -1,7 +1,7 @@
 #include <malloc.h>
 #include <string.h>
 
-#include "../utility/utility.h"
+#include "../errors/panic.h"
 #include "analizer.h"
 #include "../theia.h"
 

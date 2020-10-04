@@ -6,29 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/ualb/Documents/git/ualb/theia/src/analizer/analizer.c
+C:/Users/ualb/Documents/git/ualb/theia/src/engine_string/analizer.c
 malloc.h
 -
 string.h
 -
-../utility/utility.h
-C:/Users/ualb/Documents/git/ualb/theia/src/utility/utility.h
+../errors/panic.h
+C:/Users/ualb/Documents/git/ualb/theia/src/errors/panic.h
 analizer.h
-C:/Users/ualb/Documents/git/ualb/theia/src/analizer/analizer.h
+C:/Users/ualb/Documents/git/ualb/theia/src/engine_string/analizer.h
 ../theia.h
 C:/Users/ualb/Documents/git/ualb/theia/src/theia.h
 
-C:/Users/ualb/Documents/git/ualb/theia/src/analizer/analizer.h
+C:/Users/ualb/Documents/git/ualb/theia/src/engine_string/analizer.h
 
-C:/Users/ualb/Documents/git/ualb/theia/src/theia.c
-stdbool.h
--
-string.h
--
-theia.h
-C:/Users/ualb/Documents/git/ualb/theia/src/theia.h
-utility/utility.h
-C:/Users/ualb/Documents/git/ualb/theia/src/utility/utility.h
+C:/Users/ualb/Documents/git/ualb/theia/src/errors/panic.h
 
 C:/Users/ualb/Documents/git/ualb/theia/src/theia.h
 stdlib.h
@@ -37,28 +29,6 @@ string.h
 -
 stdio.h
 -
-utility/utility.h
-C:/Users/ualb/Documents/git/ualb/theia/src/utility/utility.h
-
-C:/Users/ualb/Documents/git/ualb/theia/src/utility/utility.c
-stdio.h
--
-stdlib.h
--
-utility.h
-C:/Users/ualb/Documents/git/ualb/theia/src/utility/utility.h
-
-C:/Users/ualb/Documents/git/ualb/theia/src/utility/utility.h
-
-C:/Users/ualb/Documents/git/ualb/theia/test/sintact_analizer_test.c
-stdio.h
--
-stdlib.h
--
-string.h
--
-../src/analizer/analizer.h
-C:/Users/ualb/Documents/git/ualb/theia/src/analizer/analizer.h
-../src/utility/utility.h
-C:/Users/ualb/Documents/git/ualb/theia/src/utility/utility.h
+errors/panic.h
+C:/Users/ualb/Documents/git/ualb/theia/src/errors/panic.h
 

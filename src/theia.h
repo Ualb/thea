@@ -4,7 +4,7 @@
 #include <stdlib.h> 
 #include <string.h>
 #include <stdio.h>
-#include "utility/utility.h"
+#include "errors/panic.h"
 
 /**
  * The document is a collections of informations
