@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/ualb/Documents/git/ualb/theia/src/analizer/analizer.c" "C:/Users/ualb/Documents/git/ualb/theia/cmake-build-debug/CMakeFiles/Theia.dir/src/analizer/analizer.c.obj"
+  "C:/Users/ualb/Documents/git/ualb/theia/src/engine_string/analizer.c" "C:/Users/ualb/Documents/git/ualb/theia/cmake-build-debug/CMakeFiles/Theia.dir/src/engine_string/analizer.c.obj"
+  "C:/Users/ualb/Documents/git/ualb/theia/src/errors/panic.c" "C:/Users/ualb/Documents/git/ualb/theia/cmake-build-debug/CMakeFiles/Theia.dir/src/errors/panic.c.obj"
   "C:/Users/ualb/Documents/git/ualb/theia/src/theia.c" "C:/Users/ualb/Documents/git/ualb/theia/cmake-build-debug/CMakeFiles/Theia.dir/src/theia.c.obj"
-  "C:/Users/ualb/Documents/git/ualb/theia/src/utility/utility.c" "C:/Users/ualb/Documents/git/ualb/theia/cmake-build-debug/CMakeFiles/Theia.dir/src/utility/utility.c.obj"
   "C:/Users/ualb/Documents/git/ualb/theia/test/sintact_analizer_test.c" "C:/Users/ualb/Documents/git/ualb/theia/cmake-build-debug/CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

@@ -11,7 +11,7 @@
 
 /**
  * @file
- * @brief Miscllaneous utility functions and macros.
+ * @brief Miscllaneous errors functions and macros.
  */
 #ifndef _json_util_h_
 #define _json_util_h_
@@ -32,7 +32,7 @@ extern "C" {
 
 #define JSON_FILE_BUF_SIZE 4096
 
-/* utility functions */
+/* errors functions */
 /**
  * Read the full contents of the given file, then convert it to a
  * json_object using json_tokener_parse().

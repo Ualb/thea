@@ -1,7 +1,7 @@
 
 
-#ifndef THEIA_UTILITY_H
-#define THEIA_UTILITY_H
+#ifndef THEIA_PANIC_H
+#define THEIA_PANIC_H
 
 
 #define True 1
@@ -17,4 +17,4 @@ typedef int boolean;
 typedef unsigned int iterator;
 void panic(unsigned int error, ...);
 
-#endif THEIA_UTILITY_H
+#endif THEIA_PANIC_H

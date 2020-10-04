@@ -142,32 +142,59 @@ Theia/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/build
 .PHONY : Theia/fast
 
-src/analizer/analizer.obj: src/analizer/analizer.c.obj
+src/engine_string/analizer.obj: src/engine_string/analizer.c.obj
 
-.PHONY : src/analizer/analizer.obj
+.PHONY : src/engine_string/analizer.obj
 
 # target to build an object file
-src/analizer/analizer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/analizer/analizer.c.obj
-.PHONY : src/analizer/analizer.c.obj
+src/engine_string/analizer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/engine_string/analizer.c.obj
+.PHONY : src/engine_string/analizer.c.obj
 
-src/analizer/analizer.i: src/analizer/analizer.c.i
+src/engine_string/analizer.i: src/engine_string/analizer.c.i
 
-.PHONY : src/analizer/analizer.i
+.PHONY : src/engine_string/analizer.i
 
 # target to preprocess a source file
-src/analizer/analizer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/analizer/analizer.c.i
-.PHONY : src/analizer/analizer.c.i
+src/engine_string/analizer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/engine_string/analizer.c.i
+.PHONY : src/engine_string/analizer.c.i
 
-src/analizer/analizer.s: src/analizer/analizer.c.s
+src/engine_string/analizer.s: src/engine_string/analizer.c.s
 
-.PHONY : src/analizer/analizer.s
+.PHONY : src/engine_string/analizer.s
 
 # target to generate assembly for a file
-src/analizer/analizer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/analizer/analizer.c.s
-.PHONY : src/analizer/analizer.c.s
+src/engine_string/analizer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/engine_string/analizer.c.s
+.PHONY : src/engine_string/analizer.c.s
+
+src/errors/panic.obj: src/errors/panic.c.obj
+
+.PHONY : src/errors/panic.obj
+
+# target to build an object file
+src/errors/panic.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/errors/panic.c.obj
+.PHONY : src/errors/panic.c.obj
+
+src/errors/panic.i: src/errors/panic.c.i
+
+.PHONY : src/errors/panic.i
+
+# target to preprocess a source file
+src/errors/panic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/errors/panic.c.i
+.PHONY : src/errors/panic.c.i
+
+src/errors/panic.s: src/errors/panic.c.s
+
+.PHONY : src/errors/panic.s
+
+# target to generate assembly for a file
+src/errors/panic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/errors/panic.c.s
+.PHONY : src/errors/panic.c.s
 
 src/theia.obj: src/theia.c.obj
 
@@ -195,33 +222,6 @@ src/theia.s: src/theia.c.s
 src/theia.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/theia.c.s
 .PHONY : src/theia.c.s
-
-src/utility/utility.obj: src/utility/utility.c.obj
-
-.PHONY : src/utility/utility.obj
-
-# target to build an object file
-src/utility/utility.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/utility/utility.c.obj
-.PHONY : src/utility/utility.c.obj
-
-src/utility/utility.i: src/utility/utility.c.i
-
-.PHONY : src/utility/utility.i
-
-# target to preprocess a source file
-src/utility/utility.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/utility/utility.c.i
-.PHONY : src/utility/utility.c.i
-
-src/utility/utility.s: src/utility/utility.c.s
-
-.PHONY : src/utility/utility.s
-
-# target to generate assembly for a file
-src/utility/utility.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/utility/utility.c.s
-.PHONY : src/utility/utility.c.s
 
 test/sintact_analizer_test.obj: test/sintact_analizer_test.c.obj
 
@@ -259,15 +259,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Theia
-	@echo ... src/analizer/analizer.obj
-	@echo ... src/analizer/analizer.i
-	@echo ... src/analizer/analizer.s
+	@echo ... src/engine_string/analizer.obj
+	@echo ... src/engine_string/analizer.i
+	@echo ... src/engine_string/analizer.s
+	@echo ... src/errors/panic.obj
+	@echo ... src/errors/panic.i
+	@echo ... src/errors/panic.s
 	@echo ... src/theia.obj
 	@echo ... src/theia.i
 	@echo ... src/theia.s
-	@echo ... src/utility/utility.obj
-	@echo ... src/utility/utility.i
-	@echo ... src/utility/utility.s
 	@echo ... test/sintact_analizer_test.obj
 	@echo ... test/sintact_analizer_test.i
 	@echo ... test/sintact_analizer_test.s

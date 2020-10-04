@@ -71,7 +71,7 @@ For create the sheet's
         },
         conditions: {
             year_birth_day: "if YEAR(birth_day) > 1950: BLOCK()",
-            phone_start_with: "if STR.STARTWITH(STR.CONVERT(phone), 505): ADD.ATRIBUTE(region:'string(Nic)')"
+            phone_start_with: "if STR.STARTWITH(STR.CONVERT(phone), 505): ADD.ATTRIBUTE(region:'string(Nic)')"
         }
     }
 }

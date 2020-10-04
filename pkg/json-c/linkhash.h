@@ -323,7 +323,7 @@ int lh_table_resize(struct lh_table *t, int new_size);
  *
  * This is an exension to support functions that need to calculate
  * the hash several times and allows them to do it just once and then pass
- * in the hash to all utility functions. Depending on use case, this can be a
+ * in the hash to all errors functions. Depending on use case, this can be a
  * considerable performance improvement.
  * @param t the table (used to obtain hash function)
  * @param k a pointer to the key to lookup

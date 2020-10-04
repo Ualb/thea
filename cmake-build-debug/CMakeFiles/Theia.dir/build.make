@@ -89,31 +89,31 @@ CMakeFiles/Theia.dir/src/theia.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Theia.dir/src/theia.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\ualb\Documents\git\ualb\theia\src\theia.c -o CMakeFiles\Theia.dir\src\theia.c.s
 
-CMakeFiles/Theia.dir/src/analizer/analizer.c.obj: CMakeFiles/Theia.dir/flags.make
-CMakeFiles/Theia.dir/src/analizer/analizer.c.obj: ../src/analizer/analizer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ualb\Documents\git\ualb\theia\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Theia.dir/src/analizer/analizer.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Theia.dir\src\analizer\analizer.c.obj   -c C:\Users\ualb\Documents\git\ualb\theia\src\analizer\analizer.c
+CMakeFiles/Theia.dir/src/engine_string/analizer.c.obj: CMakeFiles/Theia.dir/flags.make
+CMakeFiles/Theia.dir/src/engine_string/analizer.c.obj: ../src/engine_string/analizer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ualb\Documents\git\ualb\theia\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Theia.dir/src/engine_string/analizer.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Theia.dir\src\engine_string\analizer.c.obj   -c C:\Users\ualb\Documents\git\ualb\theia\src\engine_string\analizer.c
 
-CMakeFiles/Theia.dir/src/analizer/analizer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Theia.dir/src/analizer/analizer.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\ualb\Documents\git\ualb\theia\src\analizer\analizer.c > CMakeFiles\Theia.dir\src\analizer\analizer.c.i
+CMakeFiles/Theia.dir/src/engine_string/analizer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Theia.dir/src/engine_string/analizer.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\ualb\Documents\git\ualb\theia\src\engine_string\analizer.c > CMakeFiles\Theia.dir\src\engine_string\analizer.c.i
 
-CMakeFiles/Theia.dir/src/analizer/analizer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Theia.dir/src/analizer/analizer.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\ualb\Documents\git\ualb\theia\src\analizer\analizer.c -o CMakeFiles\Theia.dir\src\analizer\analizer.c.s
+CMakeFiles/Theia.dir/src/engine_string/analizer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Theia.dir/src/engine_string/analizer.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\ualb\Documents\git\ualb\theia\src\engine_string\analizer.c -o CMakeFiles\Theia.dir\src\engine_string\analizer.c.s
 
-CMakeFiles/Theia.dir/src/utility/utility.c.obj: CMakeFiles/Theia.dir/flags.make
-CMakeFiles/Theia.dir/src/utility/utility.c.obj: ../src/utility/utility.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ualb\Documents\git\ualb\theia\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Theia.dir/src/utility/utility.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Theia.dir\src\utility\utility.c.obj   -c C:\Users\ualb\Documents\git\ualb\theia\src\utility\utility.c
+CMakeFiles/Theia.dir/src/errors/panic.c.obj: CMakeFiles/Theia.dir/flags.make
+CMakeFiles/Theia.dir/src/errors/panic.c.obj: ../src/errors/panic.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\ualb\Documents\git\ualb\theia\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Theia.dir/src/errors/panic.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Theia.dir\src\errors\panic.c.obj   -c C:\Users\ualb\Documents\git\ualb\theia\src\errors\panic.c
 
-CMakeFiles/Theia.dir/src/utility/utility.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Theia.dir/src/utility/utility.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\ualb\Documents\git\ualb\theia\src\utility\utility.c > CMakeFiles\Theia.dir\src\utility\utility.c.i
+CMakeFiles/Theia.dir/src/errors/panic.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Theia.dir/src/errors/panic.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\ualb\Documents\git\ualb\theia\src\errors\panic.c > CMakeFiles\Theia.dir\src\errors\panic.c.i
 
-CMakeFiles/Theia.dir/src/utility/utility.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Theia.dir/src/utility/utility.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\ualb\Documents\git\ualb\theia\src\utility\utility.c -o CMakeFiles\Theia.dir\src\utility\utility.c.s
+CMakeFiles/Theia.dir/src/errors/panic.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Theia.dir/src/errors/panic.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\ualb\Documents\git\ualb\theia\src\errors\panic.c -o CMakeFiles\Theia.dir\src\errors\panic.c.s
 
 CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: CMakeFiles/Theia.dir/flags.make
 CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj: ../test/sintact_analizer_test.c
@@ -131,16 +131,16 @@ CMakeFiles/Theia.dir/test/sintact_analizer_test.c.s: cmake_force
 # Object files for target Theia
 Theia_OBJECTS = \
 "CMakeFiles/Theia.dir/src/theia.c.obj" \
-"CMakeFiles/Theia.dir/src/analizer/analizer.c.obj" \
-"CMakeFiles/Theia.dir/src/utility/utility.c.obj" \
+"CMakeFiles/Theia.dir/src/engine_string/analizer.c.obj" \
+"CMakeFiles/Theia.dir/src/errors/panic.c.obj" \
 "CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj"
 
 # External object files for target Theia
 Theia_EXTERNAL_OBJECTS =
 
 Theia.exe: CMakeFiles/Theia.dir/src/theia.c.obj
-Theia.exe: CMakeFiles/Theia.dir/src/analizer/analizer.c.obj
-Theia.exe: CMakeFiles/Theia.dir/src/utility/utility.c.obj
+Theia.exe: CMakeFiles/Theia.dir/src/engine_string/analizer.c.obj
+Theia.exe: CMakeFiles/Theia.dir/src/errors/panic.c.obj
 Theia.exe: CMakeFiles/Theia.dir/test/sintact_analizer_test.c.obj
 Theia.exe: CMakeFiles/Theia.dir/build.make
 Theia.exe: CMakeFiles/Theia.dir/linklibs.rsp
