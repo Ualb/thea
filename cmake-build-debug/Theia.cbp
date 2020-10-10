@@ -74,10 +74,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/constants.h">
+			<Option target="Theia"/>
+		</Unit>
 		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/engine_string/analizer.c">
 			<Option target="Theia"/>
 		</Unit>
 		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/engine_string/analizer.h">
+			<Option target="Theia"/>
+		</Unit>
+		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/equifinality/iofile.c">
+			<Option target="Theia"/>
+		</Unit>
+		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/equifinality/iofile.h">
 			<Option target="Theia"/>
 		</Unit>
 		<Unit filename="C:/Users/ualb/Documents/git/ualb/theia/src/errors/panic.c">

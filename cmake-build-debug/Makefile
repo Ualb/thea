@@ -169,6 +169,33 @@ src/engine_string/analizer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/engine_string/analizer.c.s
 .PHONY : src/engine_string/analizer.c.s
 
+src/equifinality/iofile.obj: src/equifinality/iofile.c.obj
+
+.PHONY : src/equifinality/iofile.obj
+
+# target to build an object file
+src/equifinality/iofile.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/equifinality/iofile.c.obj
+.PHONY : src/equifinality/iofile.c.obj
+
+src/equifinality/iofile.i: src/equifinality/iofile.c.i
+
+.PHONY : src/equifinality/iofile.i
+
+# target to preprocess a source file
+src/equifinality/iofile.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/equifinality/iofile.c.i
+.PHONY : src/equifinality/iofile.c.i
+
+src/equifinality/iofile.s: src/equifinality/iofile.c.s
+
+.PHONY : src/equifinality/iofile.s
+
+# target to generate assembly for a file
+src/equifinality/iofile.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Theia.dir\build.make CMakeFiles/Theia.dir/src/equifinality/iofile.c.s
+.PHONY : src/equifinality/iofile.c.s
+
 src/errors/panic.obj: src/errors/panic.c.obj
 
 .PHONY : src/errors/panic.obj
@@ -262,6 +289,9 @@ help:
 	@echo ... src/engine_string/analizer.obj
 	@echo ... src/engine_string/analizer.i
 	@echo ... src/engine_string/analizer.s
+	@echo ... src/equifinality/iofile.obj
+	@echo ... src/equifinality/iofile.i
+	@echo ... src/equifinality/iofile.s
 	@echo ... src/errors/panic.obj
 	@echo ... src/errors/panic.i
 	@echo ... src/errors/panic.s
