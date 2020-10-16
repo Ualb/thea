@@ -1,5 +1,6 @@
 #include <malloc.h>
 #include <string.h>
+#include <stdbool.h>
 
 #include "../errors/panic.h"
 #include "analizer.h"
@@ -16,6 +17,11 @@ char *substractText(char *str, int start, int end) {
     }
     response[end + 1] = '\0';
     return response;
+}
+
+// return the slice string by str con start and end characters
+char *substractSText(char* str, char* start, char* end) {
+    return "";
 }
 
 
@@ -47,7 +53,10 @@ char *removeSpaces(char *str) {
     return str;
 }
 
-// el algoritmo se encarga de rebanar una hoja de datos
+// responde true or false by the questio start with?
+bool startWith(char* str, char* preffix) {
+    return True;
+}
 
 
 //  token data tiene como fin rebanar un texto y extraer sus componentes dado en un {}
