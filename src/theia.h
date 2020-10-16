@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "errors/panic.h"
+#include "constants.h"
 
 /**
  * The document is a collections of informations
