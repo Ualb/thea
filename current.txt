@@ -1,0 +1,3 @@
+# Modifid this archive for the location information
+
+CURRENT_PATH = "./"
