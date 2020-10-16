@@ -37,6 +37,9 @@ void panic(unsigned int error, ...)
         case ENFILE:
             printf("ERROR [ENFILE] 1002 - Demasiados archivos abiertos en el sistema\n");
             break;
+        case NOT_FILE_CURRENT_ERROR:
+            printf("ERROR [NOT_FILE_CURRENT_ERROR] 1003 - No se encuentra el archivo de directorios\n");
+            break;
         default:
             break;
     }
