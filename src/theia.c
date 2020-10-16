@@ -4,6 +4,7 @@
 
 #include "theia.h"
 #include "errors/panic.h"
+#include "equifinality/iofile.h"
 
 
 struct doc *doc;
@@ -51,4 +52,11 @@ bool close_doc()
 char *sheet_structure   = NULL;
 char *meta_shhet        = NULL;
 
+
+void shell() {
+    bool isCreated = createDOC("Customers", "./");
+    if (isCreated) {
+//
+    }
+}
 
