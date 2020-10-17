@@ -10,6 +10,8 @@
 
 boolean okStreamFile(const char* location);
 boolean createControlDOC(const char* name);
+boolean updateControlDOC(const char* name);
+boolean fileExist(FILE *file);
 char* getCurrentPath(void);
 
 boolean createDOC(const char* name, const char* location) {
@@ -18,8 +20,11 @@ boolean createDOC(const char* name, const char* location) {
 //        the create a file functionality
         FILE *file = fopen(location, "rb+");
         if (file == NULL) return False;
-//        to create the internal procedures
-        return createControlDOC(name);
+//        search the file if exists
+        if (!fileExist(file))
+//        not exists
+            return createControlDOC(name);
+        return updateControlDOC(name);
     }
 
     return False;
@@ -36,6 +41,7 @@ boolean createControlDOC(const char* name) {
     FILE *file = fopen(strcat(path, name), "r");
     if (file == NULL) return False;
 //    write datas in the file
+
     return True;
 }
 
@@ -67,13 +73,22 @@ boolean okStreamFile(const char* location) {
     return False;
 }
 
+boolean fileExist(FILE *file) {
+    return True;
+}
+
+/**
+ *
+ * @return
+ */
 char* getCurrentPath(void) {
     FILE *file = fopen("./current.txt", "r");
     if (file == NULL) panic(errno);
     char *buffer[150];
     while(feof(file) == 0) {
         fgets(*buffer, 150, file);
-        if (startWith(buffer, "CURRENT_PATH") == True) return substractSText(*buffer, "=", "");
+        if (startWith(buffer, "CURRENT_PATH") == True) return substractSText(*buffer, "\"", "\"");
     }
+
     return "";
 }
