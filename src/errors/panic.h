@@ -8,8 +8,11 @@
 #define PARSE_LEN_QUERY                 1002
 #define NOT_FILE_CURRENT_ERROR          1003
 
-
-typedef unsigned int iterator;
+/**
+ *
+ * @param error
+ * @param ...
+ */
 void panic(unsigned int error, ...);
 
 #endif THEIA_PANIC_H
