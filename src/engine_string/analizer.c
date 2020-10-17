@@ -1,8 +1,6 @@
 #include <malloc.h>
 #include <string.h>
-#include <stdbool.h>
 
-#include "../errors/panic.h"
 #include "analizer.h"
 #include "../theia.h"
 
@@ -19,9 +17,19 @@ char *substractText(char *str, int start, int end) {
     return response;
 }
 
-// return the slice string by str con start and end characters
+// return the slice string by str with start and end characters
 char *substractSText(char* str, char* start, char* end) {
-    return "";
+//    invalid str
+    if (strlen(str) <= strlen(start) + strlen(end)) return str;
+    if (strlen(start) > 1 || strlen(end) > 1) return str;
+//    the start char exists in str
+    int startPosition, endPosition;
+    for (iterator i = 0; i < strlen(str); ++i) {
+        if (str[i] == start[0]) startPosition = i;
+        if (str[i] == end[0]) endPosition = i;
+    }
+    if (startPosition > endPosition) return str;
+    return substractText(str, startPosition, endPosition);
 }
 
 
@@ -53,8 +61,13 @@ char *removeSpaces(char *str) {
     return str;
 }
 
-// responde true or false by the questio start with?
-bool startWith(char* str, char* preffix) {
+// response true or false by the question start with?
+boolean startWith(char* str, const char* prefix) {
+//    delted all spaces
+    char *withoutSpaces = removeSpaces(str);
+    for (iterator i = 0; i < strlen(prefix); ++i)
+        if (prefix[i] != withoutSpaces[i])
+            return False;
     return True;
 }
 

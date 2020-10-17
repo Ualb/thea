@@ -2,6 +2,9 @@
 
 #ifndef THEIA_ANALIZER_H
 #define THEIA_ANALIZER_H
+
+#include "../constants.h"
+
 #define ZERO_VALUE 0
 
 /**
@@ -33,7 +36,7 @@ char *removeSpaces(char *str);
  * @param preffix
  * @return
  */
-bool startWith(char* str, char* preffix);
+boolean startWith(char* str, const char* prefix);
 
 /**
  *
