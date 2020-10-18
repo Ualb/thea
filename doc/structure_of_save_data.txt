@@ -102,6 +102,29 @@ for add  data to sheet
 for get data to sheet
 {
     get {
+       Customers : "ALL()"
+
+       # Customers: [ "first_name", "phone" ]
+       # "ALL()", COUNT(), etc
+    }
+}
+
+multy table
+{
+    get {
+       Customers : ALL()
+       Stores: {
+            fields: ["direction", "employee_name"]
+            conditions: {
+                relational: "mto" # many to one
+            }
+       }
+    }
+}
+
+for get data to sheet, specific
+{
+    get {
         from: "Customers",
         get_attributes: [id, first_name, YEAR(birth_day), region]
     }
