@@ -4,7 +4,7 @@
 /**
  *
  */
-typedef int boolean;
+typedef char boolean;
 
 /**
  * var interator for loops
