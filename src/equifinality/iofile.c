@@ -4,6 +4,7 @@
 #include "../engine_string/analizer.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <dirent.h>
 #include <errno.h>
 #include <string.h>
@@ -11,19 +12,26 @@
 boolean okStreamFile(const char* location);
 boolean createControlDOC(const char* name);
 boolean updateControlDOC(const char* name);
-boolean fileExist(FILE *file);
+boolean fileExist(void);
 char* getCurrentPath(void);
 
-boolean createDOC(const char* name, const char* location) {
+boolean createDOC(const char* name, char* location) {
 //    first check the location
     if (okStreamFile(location)) {
-//        the create a file functionality
-        FILE *file = fopen(location, "rb+");
-        if (file == NULL) return False;
-//        search the file if exists
-        if (!fileExist(file))
+//        the create a file functionality (if exist???)
+        FILE *file = fopen(strcat(location, name), "wb");
+        if (file == NULL) {
+            fclose(file);
+            return False;
+        }
+//        close the file of DOC datas
+        fclose(file);
+//        .equifinality - search the file if not exists
+        if (!fileExist()) {
 //        not exists
             return createControlDOC(name);
+        }
+        fclose(file);
         return updateControlDOC(name);
     }
 
@@ -39,7 +47,10 @@ boolean createDOC(const char* name, const char* location) {
 boolean createControlDOC(const char* name) {
     char *path = getCurrentPath();
     FILE *file = fopen(strcat(path, name), "r");
-    if (file == NULL) return False;
+    if (file == NULL) {
+        fclose(file);
+        return False;
+    }
 //    write datas in the file
 
     return True;
@@ -66,15 +77,26 @@ boolean okStreamFile(const char* location) {
     if (dir) {
         closedir(dir);
         return True;
-    } else {
-        panic(errno);
-    }
+    } else panic(errno);
 
     return False;
 }
 
-boolean fileExist(FILE *file) {
-    return True;
+/**
+ *
+ * @param file
+ * @return
+ */
+boolean fileExist(void) {
+    char *path = getCurrentPath();
+    char *e = "\\.equifinality";
+    FILE *file = fopen(strcat(path, e), "r");
+    if (file != NULL) {
+        fclose(file);
+        return True;
+    }
+
+    return False;
 }
 
 /**
@@ -84,10 +106,13 @@ boolean fileExist(FILE *file) {
 char* getCurrentPath(void) {
     FILE *file = fopen("./current.txt", "r");
     if (file == NULL) panic(errno);
-    char *buffer[150];
+    char buffer[150];
     while(feof(file) == 0) {
-        fgets(*buffer, 150, file);
-        if (startWith(buffer, "CURRENT_PATH") == True) return substractSText(*buffer, "\"", "\"");
+        fgets(buffer, 150, file);
+        if (startWith(buffer, "CURRENT_PATH") == True) {
+            fclose(file);
+            return substractSText(buffer, "\"", "\"");
+        }
     }
 
     return "";

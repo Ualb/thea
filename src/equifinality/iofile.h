@@ -8,4 +8,4 @@
  * @param location Dir to save destiantion
  * @return Is or not created
  */
-boolean createDOC(const char* name, const char* location);
+boolean createDOC(const char* name, char* location);
