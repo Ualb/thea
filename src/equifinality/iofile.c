@@ -9,9 +9,20 @@
 #include <errno.h>
 #include <string.h>
 
+
+/**
+ *
+ */
+enum type_process_to_file {
+    WRITE_IN_START,
+    WRITE_IN_END
+};
+
 boolean okStreamFile(const char* location);
-boolean createControlDOC(const char* name);
-boolean updateControlDOC(const char* name);
+boolean createControlDOC(const char* name, char* dir);
+boolean updateControlDOC(const char* name, char* dir);
+boolean writeInEquifinality(FILE *file, char* dir);
+FILE *equifinalityFile(const char* name, enum type_process_to_file kind);
 boolean fileExist(void);
 char* getCurrentPath(void);
 
@@ -21,18 +32,24 @@ boolean createDOC(const char* name, char* location) {
 //        the create a file functionality (if exist???)
         FILE *file = fopen(strcat(location, name), "wb");
         if (file == NULL) {
-            fclose(file);
             return False;
         }
 //        close the file of DOC datas
         fclose(file);
+
+        char *dir = (char *) malloc(sizeof(char) * (strlen(location) + strlen(name)));
+        if (dir == NULL) {
+            panic(errno);
+            return False;
+        }
 //        .equifinality - search the file if not exists
         if (!fileExist()) {
 //        not exists
-            return createControlDOC(name);
+            return createControlDOC(name, dir);
         }
+
         fclose(file);
-        return updateControlDOC(name);
+        return updateControlDOC(name, dir);
     }
 
     return False;
@@ -44,16 +61,8 @@ boolean createDOC(const char* name, char* location) {
  * @param struct of FILE
  * @return Success (True) or fairlure (False)
  */
-boolean createControlDOC(const char* name) {
-    char *path = getCurrentPath();
-    FILE *file = fopen(strcat(path, name), "r");
-    if (file == NULL) {
-        fclose(file);
-        return False;
-    }
-//    write datas in the file
-
-    return True;
+boolean createControlDOC(const char* name, char* dir) {
+    return writeInEquifinality(equifinalityFile(name, WRITE_IN_START), dir);
 }
 
 /**
@@ -62,8 +71,38 @@ boolean createControlDOC(const char* name) {
  * @param struct of FILE
  * @return Success (True) or fairlure (False)
  */
-boolean updateControlDOC(const char* name) {
-    return True;
+boolean updateControlDOC(const char* name, char* dir) {
+    return writeInEquifinality(equifinalityFile(name, WRITE_IN_END), dir);
+}
+
+/**
+ *
+ * @param name
+ * @return
+ */
+FILE *equifinalityFile(const char* name, enum type_process_to_file kind) {
+    char *path = getCurrentPath();
+    char *kindStr = (char *) malloc(sizeof(char) * 2);
+    kindStr = (kind == WRITE_IN_START)? "wb": "ab";
+    FILE *file = fopen(strcat(path, name), kindStr);
+    if (file == NULL) {
+//        validate the error valua
+        free(kindStr);
+        return False;
+    }
+
+    return file;
+}
+
+/**
+ *
+ * @return
+ */
+boolean writeInEquifinality(FILE *file, char* dir) {
+    boolean rtn = (fwrite(dir, 1, sizeof(dir), file) > 0)? True: False;
+    fclose(file);
+    free(dir);
+    return rtn;
 }
 
 /**
@@ -84,7 +123,6 @@ boolean okStreamFile(const char* location) {
 
 /**
  *
- * @param file
  * @return
  */
 boolean fileExist(void) {
