@@ -14,7 +14,7 @@ DOC: DOC or document is an archive file, this is
     therefore it is important to have control of the file.
     .equifinality.
 
-SHEET: They are sheets or pages where the data is written,
+SHEET: They are sheets, where the datas is written,
        these are arranged in a relational structure
        and conditional, that is, its elements can exist
        given the approval of a condition or not.
@@ -63,14 +63,14 @@ For create the sheet's
         doc: "NewYork",
         name: "Customers",
         attributes: {
-            first_name: "string, not-null, default:Anonymous",
+            first_name: "string, not-null",
             last_name: "string",
-            phone: "number",
+            phone: "string, default:Anonymous",
             birth_day: "date",
             hight: "float"
         },
         conditions: {
-            year_birth_day: "if YEAR(birth_day) > 1950: BLOCK()",
+            year_birth_day: "if YEAR(birth_day) < 1950: BLOCK()",
             phone_start_with: "if STR.STARTWITH(STR.CONVERT(phone), 505): ADD.ATTRIBUTE(region:'string(Nic)')"
         }
     }
@@ -92,7 +92,7 @@ for add  data to sheet
         set_attributes: {
             first_name: "Jorge",
             last_name: "Lex",
-            phone: 505909090,
+            phone: "505909090",
             birth_day: "1964/10/22",
             hight: 5.50
         }
@@ -103,24 +103,24 @@ for get data to sheet
 {
     get {
        Customers : "ALL()"
-
-       # Customers: [ "first_name", "phone" ]
-       # "ALL()", COUNT(), etc
     }
 }
+# Customers: [ "first_name", "phone" ]
+# "ALL()", COUNT(), etc
 
 multy table
 {
     get {
-       Customers : ALL()
+       Customers : ALL(),
        Stores: {
             fields: ["direction", "employee_name"]
             conditions: {
-                relational: "mto" # many to one
+                relational: "mto"
             }
        }
     }
 }
+#mto - many to one
 
 for get data to sheet, specific
 {
