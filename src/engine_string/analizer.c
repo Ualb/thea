@@ -2,9 +2,7 @@
 #include <string.h>
 
 #include "analizer.h"
-#include "../theia.h"
 
-// Sustrae una procion de un texto
 char *substractText(char *str, int start, int end) {
     if (start > end) return str;
     unsigned int len = (end - start);
@@ -17,7 +15,6 @@ char *substractText(char *str, int start, int end) {
     return response;
 }
 
-// return the slice string by str with start and end characters
 char *substractSText(char* str, char* start, char* end) {
 //    invalid str
     if (strlen(str) <= strlen(start) + strlen(end)) return str;
@@ -32,8 +29,6 @@ char *substractSText(char* str, char* start, char* end) {
     return substractText(str, startPosition, endPosition);
 }
 
-
-// Elimina los espacios encontrados al final de un texto
 char *removeEndSpaces(char *str) {
     iterator len = strlen(str);
     if (len > 0) {
@@ -44,7 +39,6 @@ char *removeEndSpaces(char *str) {
     return str;
 }
 
-// El algoritmo elimina los espacios dentro de una cadena de texto
 char *removeSpaces(char *str) {
     iterator len = strlen(str);
     if (len > 0) {
@@ -61,7 +55,6 @@ char *removeSpaces(char *str) {
     return str;
 }
 
-// response true or false by the question start with?
 boolean startWith(char* str, const char* prefix) {
 //    delted all spaces
     char *withoutSpaces = removeSpaces(str);
@@ -69,19 +62,4 @@ boolean startWith(char* str, const char* prefix) {
         if (prefix[i] != withoutSpaces[i])
             return False;
     return True;
-}
-
-
-//  token data tiene como fin rebanar un texto y extraer sus componentes dado en un {}
-struct sheet *captureSheet(char *sheet_definition) {
-    struct sheet result;
-    int toknum = 0;
-    const char delimiters[] = "[ , ]{ }";
-    char *token = strtok(sheet_definition, delimiters);
-    while (token != NULL) {
-        ++token;
-        if (toknum == 0) result.name = token;
-        token = strtok(NULL, delimiters);
-    }
-    return &result;
 }
