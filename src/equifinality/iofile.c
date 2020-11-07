@@ -10,9 +10,7 @@
 #include <string.h>
 
 
-/**
- *
- */
+// enumerator process apply to .equifinality file
 enum type_process_to_file {
     WRITE_IN_START,
     WRITE_IN_END
@@ -48,7 +46,6 @@ boolean createDOC(const char* name, char* location) {
             return createControlDOC(name, dir);
         }
 
-        fclose(file);
         return updateControlDOC(name, dir);
     }
 
@@ -58,6 +55,7 @@ boolean createDOC(const char* name, char* location) {
 /**
  * The algoritm creates a file in the current path with the name
  * '.equifinality' and intoduce the dir of the docs created's.
+ *
  * @param struct of FILE
  * @return Success (True) or fairlure (False)
  */
@@ -68,6 +66,7 @@ boolean createControlDOC(const char* name, char* dir) {
 /**
  * The algoritm updates a file in the current path with the name
  * '.equifinality', see @relatesalso 'createControlDOC'.
+ *
  * @param struct of FILE
  * @return Success (True) or fairlure (False)
  */
@@ -76,13 +75,14 @@ boolean updateControlDOC(const char* name, char* dir) {
 }
 
 /**
+ * Create to file and return FILE struct
  *
  * @param name
- * @return
+ * @return FILE struct
  */
 FILE *equifinalityFile(const char* name, enum type_process_to_file kind) {
     char *path = getCurrentPath();
-    char *kindStr = (char *) malloc(sizeof(char) * 2);
+    char *kindStr;
     kindStr = (kind == WRITE_IN_START)? "wb": "ab";
     FILE *file = fopen(strcat(path, name), kindStr);
     if (file == NULL) {
@@ -107,6 +107,7 @@ boolean writeInEquifinality(FILE *file, char* dir) {
 
 /**
  * Check so the dir of the DOC is input/output ok.
+ *
  * @param location Dir to check
  * @return Success (True) or fairlure (False)
  */
@@ -122,8 +123,9 @@ boolean okStreamFile(const char* location) {
 }
 
 /**
+ * Response to question if the file .equifinality in really exists
  *
- * @return
+ * @return an bollean with the value True or False
  */
 boolean fileExist(void) {
     char *path = getCurrentPath();
@@ -138,8 +140,9 @@ boolean fileExist(void) {
 }
 
 /**
+ * Obtains the current path of the current.txt
  *
- * @return
+ * @return PATH in char*
  */
 char* getCurrentPath(void) {
     FILE *file = fopen("./current.txt", "r");
