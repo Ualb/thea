@@ -1,5 +1,3 @@
-
-
 #ifndef THEIA_PANIC_H
 #define THEIA_PANIC_H
 
@@ -9,6 +7,7 @@
 #define NOT_FILE_CURRENT_ERROR          1003
 
 /**
+ * The error generic output function
  *
  * @param error
  * @param ...
