@@ -18,17 +18,17 @@ char *substractText(char *str, int start, int end) {
 char *substractSText(char* str, char* start, char* end) {
 //    invalid str
     if (strlen(str) <= strlen(start) + strlen(end)) return str;
-    if (strlen(start) > 1 || strlen(end) > 1) return str;
+    if (strlen(start) > 1 or strlen(end) > 1) return str;
 //    the start char exists in str
     int startPosition, endPosition;
     boolean startDone, endDone;
     for (iterator i = 0; i < strlen(str); ++i) {
-        if (str[i] == start[0] && startDone) {
+        if (str[i] == start[0] and startDone) {
             startPosition = i;
             startDone = True;
             continue;
         }
-        if (str[i] == end[0] && endDone) {
+        if (str[i] == end[0] and endDone) {
             endPosition = i;
             endDone = True;
             continue;
