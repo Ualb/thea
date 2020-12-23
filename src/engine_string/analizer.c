@@ -21,9 +21,18 @@ char *substractSText(char* str, char* start, char* end) {
     if (strlen(start) > 1 || strlen(end) > 1) return str;
 //    the start char exists in str
     int startPosition, endPosition;
+    boolean startDone, endDone;
     for (iterator i = 0; i < strlen(str); ++i) {
-        if (str[i] == start[0]) startPosition = i;
-        if (str[i] == end[0]) endPosition = i;
+        if (str[i] == start[0] && startDone) {
+            startPosition = i;
+            startDone = True;
+            continue;
+        }
+        if (str[i] == end[0] && endDone) {
+            endPosition = i;
+            endDone = True;
+            continue;
+        }
     }
     if (startPosition > endPosition) return str;
     return substractText(str, startPosition, endPosition);
