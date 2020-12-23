@@ -88,7 +88,7 @@ FILE *equifinalityFile(const char* name, enum type_process_to_file kind) {
     if (file == NULL) {
 //        validate the error valua
         free(kindStr);
-        return False;
+        return NULL;
     }
 
     return file;
@@ -99,7 +99,10 @@ FILE *equifinalityFile(const char* name, enum type_process_to_file kind) {
  * @return
  */
 boolean writeInEquifinality(FILE *file, char* dir) {
+    if (file == NULL) return False;
+//    write
     boolean rtn = (fwrite(dir, 1, sizeof(dir), file) > 0)? True: False;
+//    free vars and close document
     fclose(file);
     free(dir);
     return rtn;
